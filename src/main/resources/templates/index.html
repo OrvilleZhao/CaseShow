@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CaseShow 法务服务系统</title>
+    <meta name="description" itemprop="description"
+          content="caseshow是基于NLP技术的法律服务系统，主要功能有文书语义检索、文书结构化检索、NLP技术工具继承、律师推荐和审判决策支持等">
+    <meta name="description" content="caseshow是基于NLP技术的法律服务系统，主要功能有文书语义检索、文书结构化检索、NLP技术工具继承、律师推荐和审判决策支持等">
+    <meta itemprop="name" content="CaseShow 法务服务系统">
+    <meta itemprop="image" content="img/sict.jpg">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="../">
+                <img src="img/logo.png">
+            </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only"> </span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="../">首页</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        文书检索 <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../search">语义检索</a></li>
+
+                        <li><a href="#">案由检索</a></li>
+
+                        <li><a href="#">法院检索</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">法律条文</a></li>
+                <li><a href="#">指导案例</a></li>
+                <li><a href="../nlptool">NLP工具</a></li>
+                <li><a href="../about">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="main_banner">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="carousel slide" id="carousel-686984">
+                    <ol class="carousel-indicators">
+                        <li class="active" data-slide-to="0" data-target="#carousel-686984">
+                        <li data-slide-to="1" data-target="#carousel-686984">
+                        <li data-slide-to="2" data-target="#carousel-686984">
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img alt="" src="img/banner1.jpg"/>
+                        </div>
+                        <div class="item">
+                            <img alt="" src="img/banner2.jpg"/>
+                        </div>
+                        <div class="item">
+                            <img alt="" src="img/banner3.jpg"/>
+                        </div>
+                    </div>
+                    <a data-slide="prev" href="#carousel-686984" class="left carousel-control"></a>
+                    <a data-slide="next" href="#carousel-686984" class="right carousel-control"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main class="main">
+
+    <div>
+        <div class="gap">&nbsp;</div>
+        <div class="divcircle">
+            <div class="circle">
+                <img src="img/yuyi.png">
+                <div><a href="search.html">语义检索</a></div>
+            </div>
+        </div>
+        <div class="divcircle">
+            <div class="circle">
+                <img src="img/anyou.png">
+                <div><a href="#">案由检索</a></div>
+            </div>
+        </div>
+        <div class="divcircle">
+            <div class="circle">
+                <img src="img/fayuan.png">
+                <div><a href="#">法院检索</a></div>
+            </div>
+        </div>
+        <div class="gap">&nbsp;</div>
+
+    </div>
+
+    <hr width=80% size=1 color=#00ffff style="FILTER: alpha(opacity=100,finishopacity=0,style=3)">
+
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+            <div class="bar">
+                <span class="label">案例收录</span>
+                <canvas class="chart" id="myChart"></canvas>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="news">
+                <span class="label">热点新闻</span>
+                <p></p>
+                <ul>
+                    <li>
+                        <a href="http://www.court.gov.cn/zixun-xiangqing-84922.html" target="_blank">习近平出席解放军和武警部队代表团全体会议</a>
+                        <span>2018-03-12</span>
+                    </li>
+                    <li>
+                        <a href="http://www.court.gov.cn/zixun-xiangqing-84932.html" target="_blank">全国法院干警：做宪法的捍卫者践行者宣传者</a>
+                        <span>2018-03-12</span>
+                    </li>
+                    <li>
+                        <a href="http://www.court.gov.cn/zixun-xiangqing-84902.html" target="_blank">周强：自觉接受人大监督
+                            让司法更加贴近群众</a>
+                        <span>2018-03-12</span>
+                    </li>
+                    <li>
+                        <a href="http://www.court.gov.cn/zixun-xiangqing-84712.html" target="_blank">中华人民共和国宪法修正案</a>
+                        <span>2018-03-11</span>
+                    </li>
+                    <li>
+                        <a href="http://www.court.gov.cn/zixun-xiangqing-84682.html" target="_blank">人民日报社论：为民族复兴提供有力宪法保障</a>
+                        <span>2018-03-11</span>
+                    </li>
+                    <li>
+                        <a href="http://www.court.gov.cn/zixun-xiangqing-84332.html" target="_blank">习近平：法治是各级领导干部知识体系中的基础</a>
+                        <span>2018-03-10</span>
+                    </li>
+                    <li>
+                        <a href="http://www.court.gov.cn/zixun-xiangqing-84282.html" target="_blank">十三届全国人大一次会议举行第二次全体会议</a>
+                        <span>2018-03-09</span>
+                    </li>
+                    <li>
+                        <a href="http://www.court.gov.cn/zixun-xiangqing-83462.html"
+                           target="_blank">周强：深入推进党风廉政建设和反腐败斗争</a>
+                        <span>2018-03-02</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</main>
+
+
+<script src="js/chart.js"></script>
+<script>
+    var data = {
+        labels: ["刑事", "民事", "行政", "赔偿", "执行"],
+        datasets: [
+            {
+                barItemName: "name1",
+                // fillColor: "rgba(220,220,220,0.5)",
+                strokeColor: "rgba(220,220,220,1)",
+                data: [20000, 50000, 10000, 70000, 40000]
+            },
+        ],
+    };
+
+    Chart.defaults.global.animationSteps = 80;
+    // Chart.defaults.global.tooltipYPadding = 16;
+    // Chart.defaults.global.tooltipCornerRadius = 0;
+    // Chart.defaults.global.tooltipTitleFontStyle = "normal";
+    // Chart.defaults.global.tooltipFillColor = "rgba(0,160,0,0.8)";
+    // Chart.defaults.global.animationEasing = "easeOutBounce";
+    Chart.defaults.global.responsive = true;
+    // Chart.defaults.global.scaleLineColor = "black";
+    // Chart.defaults.global.scaleFontSize = 16;
+
+
+    var chartBar = null;
+    window.onload = function () {
+        var ctx = document.getElementById("myChart").getContext("2d");
+        chartBar = new Chart(ctx).Bar(data);
+
+        chartBar.datasets[0].bars[0].fillColor = "#f39800";
+        chartBar.datasets[0].bars[1].fillColor = "#13b5b1";
+        chartBar.datasets[0].bars[2].fillColor = "#019944";
+        chartBar.datasets[0].bars[3].fillColor = "#556fb5";
+        chartBar.datasets[0].bars[4].fillColor = "#eb6100";
+        chartBar.update();
+        initEvent(chartBar, clickCall);
+    }
+
+    function clickCall(evt) {
+        var activeBar = chartBar.getBarSingleAtEvent(evt);
+        if (activeBar !== null)
+            alert(activeBar.label + ": " + activeBar.barItemName + " ____ " + activeBar.value);
+    }
+
+    function initEvent(chart, handler) {
+        var method = handler;
+        var eventType = "click";
+        var node = chart.chart.canvas;
+
+        if (node.addEventListener) {
+            node.addEventListener(eventType, method);
+        } else if (node.attachEvent) {
+            node.attachEvent("on" + eventType, method);
+        } else {
+            node["on" + eventType] = method;
+        }
+    }
+
+</script>
+
+<footer class="panel-footer">
+    <br>
+    <a target="_blank" href="http://wenshu.court.gov.cn/">|中国裁判文书网|</a>
+    <a target="_blank" href="http://www.ajxxgk.jcy.cn/html/index.html">人民检察院案件信息公开网|</a><br>
+    <a target="_blank" href="http://www.court.gov.cn/zgsplcxxgkw/">|中国审判流程信息公开网|</a>
+    <a target="_blank" href="http://shixin.court.gov.cn/">中国执行信息公开网|</a>
+    <a target="_blank" href="http://ipr.court.gov.cn/">中国知识产权裁判文书网|</a>
+    <a target="_blank" href="http://www.ccmt.org.cn/">中国涉外商事海事审判网|</a>
+    <p>
+        地址：辽宁省沈阳市浑南区南屏东路16号 电话：024-24696180 <br>
+        中国科学院沈阳计算技术研究所 版权所有<br><br>
+        辽ICP备18002117号-1
+    </p>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
+
