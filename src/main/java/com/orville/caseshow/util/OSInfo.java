@@ -1,5 +1,10 @@
 package com.orville.caseshow.util;
 
+import org.springframework.util.ClassUtils;
+import org.springframework.util.ResourceUtils;
+
+import java.io.FileNotFoundException;
+
 /**
  * @program:CaseShow
  * @description:获取组件路径
@@ -29,6 +34,12 @@ public class OSInfo {
                 folder = "linux64/";
             }
         }
-        return folder + module+extension;
+        try {
+            String path = ResourceUtils.getURL("classpath:").getPath().substring(1);
+            return path + folder + module + extension;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return folder + module + extension;
     }
 }

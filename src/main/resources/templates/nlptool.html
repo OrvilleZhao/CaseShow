@@ -30,7 +30,7 @@
                         文书检索 <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="search.html">语义检索</a></li>
+                        <li><a href="../search">语义检索</a></li>
 
                         <!--<li class="divider"></li>-->
                         <li><a href="#">案由检索</a></li>
@@ -49,24 +49,22 @@
 </nav>
 <main class="main">
     <div class="nlptool-input">
-        <form method="post">
             <div class="input-group input-group-lg">
                 <textarea class="form-control" placeholder="请输入需要处理的文本" name="contents"></textarea>
             </div>
 
             <div class="fenxi-circle">
-                <input type="submit" value="分析">
+                <input type="button" value="分析" onclick="show_fenciRes()" />
             </div>
-        </form>
     </div>
     <form name="form1" method="post">
         <input type="hidden" name="val" value="">
         <div class="nlptool-result">
             <div class="nlptool-result-left">
                 <div class="nlptool-select" id="nlptool-select-fenci-mb" onclick="show_fenciRes()">分词标注</div>
-                <div class="nlptool-select" id="nlptool-select-freq-mb" onclick="show_()">词频统计</div>
+                <div class="nlptool-select" id="nlptool-select-freq-mb" onclick="show_wordFrequency()">词频统计</div>
                 <div class="nlptool-select" id="nlptool-select-keywords-mb" onclick="show_keywordsRes()">抽关键词</div>
-                <div class="nlptool-select" id="nlptool-select-shiti-mb" onclick="fun1()">实体抽取</div>
+                <div class="nlptool-select" id="nlptool-select-shiti-mb" onclick="show_entityExtraction()">实体抽取</div>
                 <div class="nlptool-select" id="nlptool-select-newwords-mb" onclick="show_newwordsRes()">新词发现</div>
                 <div class="nlptool-select" id="nlptool-select-summary-mb" onclick="show_summaryRes()">自动文摘</div>
             </div>
@@ -93,46 +91,6 @@
 
             </div>
         </div>
-
-        <div class="fenxi-mb">
-            <div class="nlptool-select-mb" id="nlptool-select-fenci" onclick="show_fenciRes()">
-                <div>分词标注</div>
-            </div>
-            <div class="nlptool-select-mb" id="nlptool-select-freq" onclick="">
-                <div>词频统计</div>
-            </div>
-            <div class="nlptool-select-mb" id="nlptool-select-keywords" onclick="show_keywordsRes()">
-                <div>抽关键词</div>
-            </div>
-            <div class="nlptool-select-mb" id="nlptool-select-shiti" onclick="">
-                <div>实体抽取</div>
-            </div>
-            <div class="nlptool-select-mb" id="nlptool-select-newwords" onclick="show_newwordsRes()">
-                <div>新词发现</div>
-            </div>
-            <div class="nlptool-select-mb" id="nlptool-select-summary" onclick="show_summaryRes()">
-                <div>自动文摘</div>
-            </div>
-        </div>
-
-        <div class="nlptool-result-mb">
-            <div class="nlptool-result-mb-top">
-                <div class="nlptool-result-mb-top-left">
-                    <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分词标注是基于模糊神经算法算法分词标注是基于模糊神经算法算法分词标注是基于模糊神经算法算法分词标注是基于模糊神经算法算法，
-                    </p>
-                </div>
-                <div class="nlptool-result-mb-top-right">
-                    <div class="mb-showmanner">文本</div>
-                    <div class="mb-showmanner">图表</div>
-                </div>
-            </div>
-            <div class="nlptool-result-mb-buttom">
-             <textarea class="mb-result" id="textarearesult-mb" placeholder="NLP处理结果展示" readonly="readonly">
-             </textarea>
-            </div>
-        </div>
-
 </main>
 
 
@@ -155,7 +113,62 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/xun.js"></script>
+<script type="application/javascript">
+    var show_fenciRes = function () {
+        $.ajax({
+            type:"POST",
+            url:"../nlptool/get_fenci",
+            async:true,
+            data:{content:$("textarea[name=contents]").val()},
+            datatype:"text",
+            success:function (data) {
+                $("#textarearesult").empty();
+                $("#textarearesult").val(data);
+            },
+            error:function (e) {
+            }
+        });
+    }
+    var show_wordFrequency = function () {
+        
+    }
+    var show_keywordsRes = function () {
+        $.ajax({
+            type:"POST",
+            url:"../nlptool/get_keywords",
+            async:true,
+            data:{content:$("textarea[name=contents]").val()},
+            datatype:"text",
+            success:function (data) {
+                $("#textarearesult").empty();
+                $("#textarearesult").val(data);
+            },
+            error:function (e) {
+            }
+        });
+    }
+    var show_entityExtraction = function () {
+        
+    }
+    var show_newwordsRes = function () {
+        $.ajax({
+            type:"POST",
+            url:"../nlptool/get_newwords",
+            async:true,
+            data:{content:$("textarea[name=contents]").val()},
+            datatype:"text",
+            success:function (data) {
+                $("#textarearesult").empty();
+                $("#textarearesult").val(data);
+            },
+            error:function (e) {
+            }
+        });
+    }
+    var show_summaryRes = function () {
+        
+    }
 
-
+</script>
 </body>
 </html>
